@@ -9,5 +9,9 @@
   "dependencies": {
     "pg": "^7.4.1",
     "typeorm": "^0.1.11"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dbseed": "npm run build && node dist/tasks/db/seed.js"
   }
 }

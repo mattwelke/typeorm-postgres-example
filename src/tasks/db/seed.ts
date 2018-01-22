@@ -21,7 +21,7 @@ import Patient from '../../models/Patient';
     // Create seed data.
     let patient = new Patient();
     patient.name = 'Matt';
-    
+
     const patientRepo = conn.getRepository(Patient);
     patient = await patientRepo.save(patient); // re-assign to know assigned id
     console.log(`Patient saved. id = ${patient.id}`);
