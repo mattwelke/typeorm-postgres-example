@@ -10,8 +10,14 @@ import Patient from './models/Patient';
 
 (async () => {
     const conn = await createConnection(typeOrmConfig);
+    console.log('PG connected.');
 
-    console.log('Connected.');
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // App's main content. This could be an Express or Koa web server for example, or even just a Node console app.
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    console.log('Exiting.');
+    // Closing the TypeORM db connection at the end of the app prevents the process from hanging at the end (ex when you
+    // use ctrl-c to stop the process in your console, or when Docker sends the signal to terminate the process).
+    await conn.close();
+    console.log('PG connection closed.');
 })();
