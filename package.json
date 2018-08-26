@@ -2,7 +2,7 @@
   "name": "typeorm-test",
   "version": "1.0.0",
   "main": "dist/index.js",
-  "license": "MIT",
+  "license": "Unlicense",
   "devDependencies": {
     "typescript": "^2.6.2"
   },
