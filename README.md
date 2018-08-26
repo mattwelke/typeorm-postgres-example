@@ -6,7 +6,7 @@ This example demonstrates using TypeORM with PostgreSQL in a Node app. It does n
 
 The following prereqs are required:
 
-* You have Node 9.x installed
+* You have Node 9.x+ installed
 * You have Docker and docker-compose installed
 
 Note that because this example is based on the official [TypeScript-Node-Starter](https://github.com/Microsoft/TypeScript-Node-Starter) from Microsoft, TypeScript is installed a local dev dependency, not used as if it were installed globally. This means that you do not have to have TypeScript installed globally.
