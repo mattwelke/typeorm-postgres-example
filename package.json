@@ -4,7 +4,7 @@
   "main": "dist/index.js",
   "license": "Unlicense",
   "devDependencies": {
-    "typescript": "^3.1.6"
+    "typescript": "^3.2.1"
   },
   "dependencies": {
     "pg": "^7.7.1",
