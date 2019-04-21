@@ -7,7 +7,7 @@
     "typescript": "^3.4.3"
   },
   "dependencies": {
-    "pg": "^7.9.0",
+    "pg": "^7.10.0",
     "typeorm": "^0.2.16"
   },
   "scripts": {
