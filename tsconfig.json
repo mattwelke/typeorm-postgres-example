@@ -1,22 +1,17 @@
 {
     "compilerOptions": {
-        "module": "commonjs",
-        "target": "es2018",
+        "module": "CommonJS",
+        "target": "ES2020",
         "noImplicitAny": true,
         "moduleResolution": "node",
         "sourceMap": true,
         "outDir": "dist",
         "baseUrl": ".",
-        "paths": {
-            "*": [
-                "node_modules/*",
-                "src/types/*"
-            ]
-        },
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
         "lib": [
-            "es6"
+            "ES2015",
+            "DOM"
         ]
     },
     "include": [

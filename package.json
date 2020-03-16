@@ -4,6 +4,7 @@
   "main": "dist/index.js",
   "license": "Unlicense",
   "devDependencies": {
+    "@types/node": "^13.9.1",
     "typescript": "^3.7.3"
   },
   "dependencies": {
