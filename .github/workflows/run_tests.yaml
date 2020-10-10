@@ -1,0 +1,31 @@
+name: Run tests
+on: [push]
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+    container: node:lts
+
+    services:
+      # https://hub.docker.com/_/postgres
+      postgres:
+        image: postgres:13
+        env:
+          POSTGRES_PASSWORD: password
+          POSTGRES_USER: typeormtest
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests
+        run: npm test
+        env:
+          POSTGRES_HOST: postgres
