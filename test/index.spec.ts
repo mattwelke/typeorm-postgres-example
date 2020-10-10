@@ -10,7 +10,7 @@ describe('example app', () => {
         // Re-using the seed task as test
 
         // Override PG config with config from CI/CD env
-        (typeOrmConfig as any).host = process.env.PG_HOST;
+        (typeOrmConfig as any).host = process.env.POSTGRES_HOST;
 
         const conn = await createConnection(typeOrmConfig);
         console.log('PG connected.');
