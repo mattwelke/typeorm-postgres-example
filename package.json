@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "pg": "^8.4.2",
-    "typeorm": "^0.2.28"
+    "typeorm": "^0.2.29"
   },
   "scripts": {
     "build": "tsc",
