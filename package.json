@@ -5,7 +5,7 @@
   "license": "Unlicense",
   "devDependencies": {
     "@types/chai": "^4.2.14",
-    "@types/mocha": "^8.2.0",
+    "@types/mocha": "^8.2.1",
     "@types/node": "^14.14.20",
     "chai": "^4.2.0",
     "mocha": "^8.2.1",
