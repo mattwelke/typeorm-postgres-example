@@ -6,7 +6,7 @@
   "devDependencies": {
     "@types/chai": "^4.2.17",
     "@types/mocha": "^8.2.2",
-    "@types/node": "^15.0.1",
+    "@types/node": "^15.0.2",
     "chai": "^4.3.4",
     "mocha": "^8.3.2",
     "ts-mocha": "^8.0.0",
