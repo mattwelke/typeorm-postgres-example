@@ -4,7 +4,7 @@
   "main": "dist/index.js",
   "license": "Unlicense",
   "devDependencies": {
-    "@types/chai": "^4.2.19",
+    "@types/chai": "^4.2.20",
     "@types/mocha": "^8.2.2",
     "@types/node": "^16.0.0",
     "chai": "^4.3.4",
