@@ -19,16 +19,51 @@ import Patient from '../../models/Patient';
     console.log('PG connected.');
 
     // Create seed data.
-    let patient = new Patient();
-    patient.name = 'Matt';
+    const doctorRepo = conn.getRepository(Doctor);
+    let doctor = new Doctor();
+    doctor.name = 'Jane';
+    doctor = await doctorRepo.save(doctor); // re-assign to know assigned id
+    console.log(`\nDoctor saved. id = ${doctor.id}`);
 
     const patientRepo = conn.getRepository(Patient);
-    patient = await patientRepo.save(patient); // re-assign to know assigned id
-    console.log(`Patient saved. id = ${patient.id}`);
+    let patient = new Patient();
+    patient.name = 'Joe';
+    patient = await patientRepo.save(patient);
+    console.log(`\nPatient saved. id = ${patient.id}`);
+
+    const appointDate = new Date();
+    const appointRepo = conn.getRepository(Appointment);
+    let appoint = new Appointment();
+    appoint.date = appointDate;
+    appoint.doctor = doctor;
+    appoint.patient = patient;
+    appoint = await appointRepo.save(appoint);
+    console.log(`\nAppointment saved.`);
+    console.log(`  id = ${appoint.id}`);
+    console.log(`  date = ${appoint.date}`);
+
+    // Read data back, including relations.
+    const patientId = patient.id;
+    const readBackPatient = await patientRepo.findOne({
+        where: {
+            id: patientId,
+        },
+        relations: {
+            appointments: {
+                doctor: true,
+            },
+        },
+    });
+    console.log(`\nPatient data with relations read back from PG.`);
+    console.log(`  id = ${readBackPatient.id}`);
+    console.log(`  name = ${readBackPatient.name}`);
+    console.log(`  # appointments = ${readBackPatient.appointments.length}`);
+    console.log(`  appointment id = ${readBackPatient.appointments[0].id}`);
+    console.log(`  appointment date = ${readBackPatient.appointments[0].date}`);
+    console.log(`  appointment doctor id = ${readBackPatient.appointments[0].doctor.id}`);
+    console.log(`  appointment doctor name = ${readBackPatient.appointments[0].doctor.name}`);
 
     // Close connection
     await conn.close();
-    console.log('PG connection closed.');
-
-    console.log('Finished dbseed task.');
+    console.log('\nPG connection closed.');
 })();

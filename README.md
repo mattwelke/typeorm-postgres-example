@@ -18,7 +18,7 @@ There are three models in this example:
 ## First run
 
 1. Run `npm install` to install local dependencies.
-1. Run `docker-compose up -d` to create and start the required Docker containers for the PostreSQL database. Adminer is used for an easy way to access the database. (I'm not a big fan of pgAdmin4.)
+1. Run `docker-compose up -d` to create and start the required Docker containers for the PostgreSQL database.
 1. Run `npm run build` to compile the code, including tasks.
 1. Run `npm run dbseed` to insert the seed data into the running PostgreSQL database. Note that since the task is coded in TypeScript, it must be compiled first. Therefore, this npm script runs the **build** npm script first before running the **dbseed** task.
 

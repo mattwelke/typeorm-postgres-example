@@ -1,6 +1,8 @@
 // Config that is common to more than one part of the app.
 
-import { PostgresConnectionOptions } from 'typeorm/driver/postgres/PostgresConnectionOptions';
+import {
+    PostgresConnectionOptions
+} from 'typeorm/driver/postgres/PostgresConnectionOptions';
 
 import Appointment from './models/Appointment';
 import Doctor from './models/Doctor';

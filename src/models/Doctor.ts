@@ -21,7 +21,7 @@ export default class Doctor {
     name: string;
 
     @OneToMany(
-        type => Appointment,
+        _ => Appointment,
         appointment => appointment.doctor
     )
     appointments: Appointment[];
