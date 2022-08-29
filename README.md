@@ -4,7 +4,7 @@ Demonstrates using TypeORM with PostgreSQL in a Node app. It does not demonstrat
 
 ## System Prerequisites
 
-* Node 9.x+
+* Node 14.x+
 * Docker and docker-compose
 
 ## Models
