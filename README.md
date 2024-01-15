@@ -1,6 +1,11 @@
 # typeorm-postgres-example
 
-Demonstrates using TypeORM with PostgreSQL in a Node app. It does not demonstrate creating the web app itself, except for a comment in the ```src/index.ts``` file showing where the app's "main" code would go. This example's purpose is to show how to set up a declarative development environment where team members (or you, in the future) would not need to run manual SQL commands for the local development database to match. Instead, the ```dbseed``` task (implemented as a TypeScript file compiled and executed by the ```build``` NPM task), takes care of ensuring the running database has the required SQL schema and that it is populated with test data.
+> [!NOTE]
+> Example is complete and will not receive future updates.
+
+Demonstrates using TypeORM with PostgreSQL in a Node app.
+
+It does not demonstrate creating the web app itself, except for a comment in the ```src/index.ts``` file showing where the app's "main" code would go. This example's purpose is to show how to set up a declarative development environment where team members (or you, in the future) would not need to run manual SQL commands for the local development database to match. Instead, the ```dbseed``` task (implemented as a TypeScript file compiled and executed by the ```build``` NPM task) takes care of ensuring the running database has the required SQL schema and that it is populated with test data.
 
 ## System Prerequisites
 
